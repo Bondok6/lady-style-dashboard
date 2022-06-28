@@ -15,10 +15,20 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["element-ui/lib/theme-chalk/index.css"],
+  css: [
+    "~/node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "element-ui/lib/theme-chalk/index.css",
+    "~/assets/sass/main.scss",
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/element-ui"],
+  plugins: [
+    "@/plugins/element-ui",
+    {
+      src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+      mode: "client",
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
