@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="m-5">Hello</h2>
-    <button class="btn btn-primary">Click</button>
+    <button class="btn btn-primary m-4">Click</button>
   </div>
 </template>
 
