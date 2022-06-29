@@ -2,6 +2,10 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-port) {
+    font-size: 55%; // 1rem = 10px
+  }
 }
 
 body {
