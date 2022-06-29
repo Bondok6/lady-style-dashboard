@@ -37,6 +37,7 @@
 <script>
 export default {
   layout: "auth",
+  // middleware: "loggedIn",
   data() {
     return {
       loginForm: {
@@ -51,7 +52,7 @@ export default {
   },
   methods: {
     login() {
-      this.$refs.loginForm.validate((valid) => {
+      this.$refs.loginForm.validate(async (valid) => {
         if (valid) {
           const loading = this.$loading({
             lock: true,
@@ -61,9 +62,9 @@ export default {
           });
           console.log(this.loginForm);
           try {
+            await this.$auth.loginWith("local", { data: this.loginForm });
+            this.$router.push("/");
             this.$message.success("تم تسجيل الدخول بنجاح");
-            // await this.$auth.loginWith("local", { data: this.loginForm });
-            // this.$router.push("/");
           } catch (error) {
             this.$message.error("خطأ في تسجيل الدخول");
           } finally {
