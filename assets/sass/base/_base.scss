@@ -2,6 +2,7 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+  margin: 1.5rem;
 
   @include respond(tab-port) {
     font-size: 55%; // 1rem = 10px
@@ -10,4 +11,6 @@ html {
 
 body {
   font-family: "Almarai", sans-serif;
+  background-color: $main-bg;
+  direction: rtl;
 }
