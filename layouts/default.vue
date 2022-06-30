@@ -4,6 +4,10 @@
       <Navbar />
     </header>
 
+    <aside id="sidebar">
+      <Sidebar />
+    </aside>
+
     <main>
       <Nuxt />
     </main>
